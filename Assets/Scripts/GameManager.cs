@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -255,5 +256,9 @@ public class GameManager : MonoBehaviour
         float x = Random.Range(-size.x * 0.45f, size.x * 0.45f);
         float y = Random.Range(-size.y * 0.45f, size.y * 0.45f);
         return new Vector2(x, y);
+    }
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
